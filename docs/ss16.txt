@@ -1,0 +1,11 @@
+
+////////////////////////////
+PRODUCT SERVICE
+ - Query products [Public]
+ - Query product using it's ID
+ - Create new product [Shop]
+ - Update product [Shop]
+ - Publish product [Shop]
+ - Unpublish product [Shop]
+ - Search products [Public]
+ - Draft products [Shop]

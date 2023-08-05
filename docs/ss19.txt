@@ -1,0 +1,15 @@
+
+////////////////////////////
+INVENTORIES: PAYMENTS - ORDERS - CARTS
+
+Collection PRODUCTS:
+ - Save data info about Products that an e-commerce shop SELLs such as:
+   + Name               + Price
+   + Description        + Images...
+ - is used to query, search that existed or publish to buy and display details info
+ on webpage or app
+
+Collection INVENTORIES:
+ - Save information about the stock of products remain in the inventories // Inventory data
+   + Quantity of each product
+   + Location ...

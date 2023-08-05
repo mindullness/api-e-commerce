@@ -1,0 +1,23 @@
+
+
+////////////////////////////
+DISCOUNT SERVICE
+
+***
+1 - Generator Discount Code [Shop | Admin]
+2 - Get all discount codes [User | Shop]
+3 - Get all products by discount code [User]
+4 - Get discount amount [User]
+5 - Delete discount Code [Shop | Admin]
+6 - Cancel discount Code [User]
+
+***
+Create new discount Code by shopId
+
+            ==>> [new] =====>> Discount 1
+          //
+         //
+payload ======>> [new] =====>> Discount 2
+         \\
+          \\
+            ==>> [new] =====>> Discount 3
