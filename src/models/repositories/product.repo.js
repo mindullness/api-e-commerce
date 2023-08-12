@@ -94,6 +94,11 @@ const queryProduct = async ({ query, limit, skip }) => {
         .exec() // optional: to tell Mongoose that you're using async/await
 }
 
+// get product by productId
+const getProductById = async (productId) => {
+    return await product.findOne({ _id: converToObjectIdMongodb(productId) })
+}
+
 module.exports = {
     findAllDraftsForShop,
     findAllPublishedForShop,
@@ -102,6 +107,7 @@ module.exports = {
     searchProductByUser,
     findAllProducts,
     findProduct,
-    updateProductById
+    updateProductById,
+    getProductById
 }
 

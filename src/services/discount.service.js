@@ -16,7 +16,7 @@ const { discount } = require('../models/discount.model')
 const { BadRequestError, NotFoundError } = require('../core/error.response')
 const { converToObjectIdMongodb } = require('../utils')
 const { findAllProducts } = require('../models/repositories/product.repo')
-const { findAllDiscountCodesUnSelect, checkDiscountExists } = require('../models/repositories/discount.repo')
+const { findAllDiscountCodesUnSelect } = require('../models/repositories/discount.repo')
 
 class DiscountService {
 
