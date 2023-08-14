@@ -1,3 +1,4 @@
+const { converToObjectIdMongodb } = require('../../utils')
 const { inventory } = require('../inventory.model')
 const { Types } = require('mongoose')
 
@@ -12,7 +13,25 @@ const insertInventory = async ({
     })
 }
 
-
+const reservationInventory = async ({ productId, quantity, cartId }) => {
+    const query = {
+        inven_productId: converToObjectIdMongodb(productId),
+        inven_stock: { $gte: quantity }
+    }, updateSet = {
+        $inc: {
+            inven_stock: -quantity
+        },
+        $push: {
+            inven_reservations: {
+                quantity,
+                cartId,
+                createdOn: new Date()
+            }
+        }
+    }, options = { upsert: true, new: true }
+    return await inventory.updateOne(query, updateSet, options)
+}
 module.exports = {
-    insertInventory
+    insertInventory,
+    reservationInventory
 }
